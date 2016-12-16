@@ -1,62 +1,81 @@
-#### showTvList
+# Добавить свои поля в заказ компонента minishop2 в панели администратора
 
-**Описание:**
+### Без изменения исходников
 
-Сниппет выводит все ТВ значения для текущего ресурса
+![Order Fields](/assets/images/order_1.png)
+
+**Источник:**
+[modx.pro](https://modx.pro/solutions/10040-add-your-fields-in-the-order-form/)
+
+**Задача:**
+Сохранять дополнительные поля в панели администратора при оформлении заказа 
+
+**Шаги** 
+1. Добавить необходимые поля, для примера взяты тип плательщика, название организации и инн.
+2. Добавить плагин срабатывающий при сохранении заказа и при подключении js минишопа в админке.
+3. Добавить настройки полей в minishop2
+4. Добавить записи записи словарей.
 
 
-**Свойства:**
-
-**&tplWrapper** - внешняя обертка
-
-По умолчанию: 
+**1. В форму оформления заказа добавляем нужные поля:**
 ```html
-@INLINE  <ul>[[+fieldsResult]]</ul>
+<label><input type="radio" name="extfld_type" value="Юридическое лицо">Юридическое лицо</label>
+<label><input type="radio" name="extfld_type" value="Физическое лицо">Физическое лицо</label>
+<label><input type="text" name="extfld_org">Название организации</label>
+<label><input type="text" name="extfld_inn">ИНН</label>Все поля с префиксом extfld_ попадут в заказ.
 ```
 
-**&tplCat** - чанк для категории с её полями
-
-По умолчанию: 
-```html
-@INLINE  <li><h4>[[+category]]</h4> <ul>[[+rows]]</ul></li>
-```
-
-Доступные поля:
-* [[+category]] - Наименование категории
-* [[+rows]] - массив всех полей
-
-**&tplRow**  чанк для одного ряда полей
-
-По умолчанию: 
-```html
-@INLINE <li>[[+name]]: [[+caption]] - [[+value]]</li>
-```
-
-**Доступные поля:**
-* [[+id]] - id ТВ 
-* [[+default]] - значение по умолчанию
-* [[+description]] - описание ТВ поля 
-* [[+name]] - имя ТВ (как храниться в базе данных)
-* [[+value]] - значение ТВ  
-* [[+caption]] - Заголовок ТВ 
-
-
-**Параметры:**
-* &id - id ресурса, по умолчанию берется текущий документ
-* &includeTv - список id необходимых ТВ полей через запятую
-* &excludeTv - список id ТВ полей через запятую? которые НЕ надо выводить
-* &includeCat - список id необходимых категорий через запятую (категории и её поля)
-* &excludeCat - список  id категорий через запятую, которые НЕ надо выводить (категории и её поля)
-
-**При установленном pdoTools ПОДДЕРЖИВАЕТ INLINE чанки, без него - НЕ поддерживает, только tpl** 
-
-ИСПОЛЬЗОВАНИЕ:
+**2. Создаем плагин msExtraAddressFields и вешаем его на события msOnBeforeCreateOrder и msOnManagerCustomCssJs. Плагин сохраняет нужные поля при оформлении заказа в json в поле properties таблицы modx_ms2_order_addresses, а так же подключает нужный js в админке.**
 ```php
-    [[!showTvList?     
-       &excludeTv = `1,2` 
-       &includeTv = `4,3` 
-       &tplWrapper = `tpl.fieldsWrapper`
-       &tplCat = `tpl.fieldsCat`
-       &tplRow = `tpl.fieldsRow`
-    ]]
+<?php
+switch ($modx->event->name) {
+    case 'msOnBeforeCreateOrder':
+        $address = $msOrder->getOne('Address');
+        $properties = array();
+        foreach ($_POST as $key => $value){
+            if (strpos($key,'extfld_') !== false){
+                $properties[$key] = htmlentities($value,ENT_COMPAT | ENT_HTML401,'UTF-8');
+            }
+        }
+        if (count($properties) > 0){
+            $address->set('properties', json_encode($properties));    
+        }
+    break;
+    
+    case 'msOnManagerCustomCssJs':
+        if ($page != 'orders') return;
+	$modx->controller->addHtml("
+            <script type='text/javascript'>
+                Ext.ComponentMgr.onAvailable('minishop2-window-order-update', function(){
+                	if (miniShop2.config['order_address_fields'].in_array('properties')){
+                		if (this.record.addr_properties){
+                		    var key;
+                			for (key in this.record.addr_properties) {
+                				this.fields.items[2].items.push(
+                					{
+                						xtype: 'displayfield',
+                						name: 'addr_properties_'+key,
+                						fieldLabel: _('ms2_properties_'+key),
+                						anchor: '100%',
+                						style: 'border:1px solid #efefef;width:95%;padding:5px;',
+                						html: this.record.addr_properties[key]
+                					}
+                				);
+                			}
+                		}		
+                	}
+                });                
+            </script>");
+    break;
+}
 ```
+
+**3. Добавляем вывод поля properties:**
+Заходим в системные настройки, там выбираем minishop2, блок Заказы.
+Добавляем к значению «Поля адреса доставки» properties.
+
+**4. Добавляем записи словарей:**
+Заходим в Управление словарями, выбираем пространство имен minishop2, тема — manager, язык — ru.
+Создаем новые записи с именами вида: ms2_properties_имя_вашего_поля (в данном случае ms2_properties_extfld_type, ms2_properties_extfld_org, ms2_properties_extfld_inn), значения — названия полей, которые будут отображаться в админке. 
+
+Поля не редактируемые, только выводят отправленные покупателем данные
