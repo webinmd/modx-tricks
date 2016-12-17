@@ -7,4 +7,4 @@ Tricks for MODX REVO
 
 1. minishop2
 	* [Добавить свои поля при оформлении заказа](/minishop2/order/AddFieldToOrderInManager.md)
-	* [Динамическое изменение основной корзины](/minishop2/cart/DynamicUpdateCart.md)
+	* [Динамическое обновление основной корзины](/minishop2/cart/DynamicUpdateCart.md)
