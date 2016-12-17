@@ -9,7 +9,7 @@
 Динамически изменять основную корзину при смене опций или добавлении/удалении товара-подарка  
 
 **Шаги** 
-1. Расширить класс корзины
+1. Расширить класс корзины <br>
 2. Изменение default.js
 
 У MS2 есть хорошая вещь как возможность расширения класса msCartHandler. Все обновленные данные берутся $miniShop2->cart->status() и отсюда следует что нужно в этот массив данных дописать нужные нам данные, а именно список товаров которые попадут в [[+goods]]
@@ -25,7 +25,7 @@ class msCartProductHandler extends msCartHandler {
             'total_count' => 0
             ,'total_cost' => 0
             ,'total_weight' => 0
-            ,'cart' => $this->getProducts()
+            ,'cart' => $this->getProducts($cart)
         );
         foreach ($this->cart as $item) {
             if (empty($item['ctx']) || $item['ctx'] == $this->modx->context->key){
@@ -43,7 +43,7 @@ class msCartProductHandler extends msCartHandler {
         $cart = $this->get();
         
         if (!$this->modx->loadClass('pdofetch', MODX_CORE_PATH . 'components/pdotools/model/pdotools/', false, true)) {return false;}
-        $pdoFetch = new pdoFetch($this->modx, $scriptProperties);
+        $pdoFetch = new pdoFetch($this->modx, array());
 
         $tplOuter = 'msCartOuter';
         $tplRow = 'msCartRow';      
@@ -157,5 +157,5 @@ $(miniShop2.Cart.totalCost).text(miniShop2.Utils.formatPrice(status['total_cost'
 $(miniShop2.Cart.totalProducts).html(status['cart']);
 ```
 
-###Осталось только обернуть вызов сниппета [[!msCart]] в блок с классом «ms2_total_products».
+####Осталось только обернуть вызов сниппета [[!msCart]] в блок с классом «ms2_total_products».
  
