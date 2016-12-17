@@ -7,4 +7,4 @@ Tricks for MODX REVO
 **Соддержание**
 
 1. minishop2
-	* [Добавить свои поля при оформлении заказа](modx-tricks/minishop2/order/AddFieldToOrderInManager.md)
+	* [Добавить свои поля при оформлении заказа](/minishop2/order/AddFieldToOrderInManager.md)
