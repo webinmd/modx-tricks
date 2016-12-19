@@ -80,3 +80,14 @@ switch ($modx->event->name) {
 
 Результат <br>
 ![Order Fields](/assets/images/order_1.jpg)
+
+**  В письме использовать следующим образом:**<br>
+Если используется Fenom то<br>
+```html
+{$address.properties.extfld_org}
+```
+<br>
+Если нет то:<br>
+```html
+[[+address.properties.extfld_org]]
+```
