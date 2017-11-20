@@ -15,7 +15,7 @@
 У MS2 есть хорошая вещь как возможность расширения класса msCartHandler. Все обновленные данные берутся $miniShop2->cart->status() и отсюда следует что нужно в этот массив данных дописать нужные нам данные, а именно список товаров которые попадут в [[+goods]]
 
 
-**1.** Для начала создаем в папке core/components/minishop2/custom/cart файл msсartзroductрandler.class.php с следующим содержимым:
+**1.** Для начала создаем в папке core/components/minishop2/custom/cart файл msсartroductрandler.class.php с следующим содержимым:
 ```php
 <?php
 class msCartProductHandler extends msCartHandler {
