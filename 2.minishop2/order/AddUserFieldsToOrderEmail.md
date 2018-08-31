@@ -1,16 +1,17 @@
 1) tpl.msEmail
 Добавить
-
+```
 <tr>
     <td></td>
     <td>{block 'address'}{/block}</td>
     <td></td>
 </tr>
+```
 
 2) tpl.msEmail.new.manager
 
 Добавить 
-
+```
 {block 'address'}
 <table class="container" style="padding:0 20px 20px 20px;width: 100%;background:#fff;margin-top:10px;">
     <tr>
@@ -40,3 +41,4 @@
     </tr>
 </table>
 {/block}
+```
