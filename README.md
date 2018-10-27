@@ -7,6 +7,8 @@ Tricks for MODX REVO
 
 1. AjaxForm
 	* [Простой пример формы обратного звонка](/1.AjaxForm/SimpleModalFormExample.md)
+	* [Простой пример формы с использованием Fenom](/1.AjaxForm/SimpleModalFormFenom.md)
+	* [Recaptcha2](/1.AjaxForm/AddRecaptchaV2.md)
 
 2. minishop2
 	* [Добавить свои поля при оформлении заказа](/2.minishop2/order/AddFieldToOrderInManager.md)
