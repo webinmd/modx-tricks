@@ -10,6 +10,8 @@ Tricks for MODX REVO
 	* [Простой пример формы с использованием Fenom](/1.AjaxForm/SimpleModalFormFenom.md)
 	* [Recaptcha2](/1.AjaxForm/AddRecaptchaV2.md)
 	* [SMTP для gmail](/1.AjaxForm/SMTP-gmail.md)
+	* [SMTP для beget](/1.AjaxForm/SMTP-beget.md)
+	* [SMTP для yandex](/1.AjaxForm/SMTP-yandex.md)
 
 2. minishop2
 	* [Добавить свои поля при оформлении заказа](/2.minishop2/order/AddFieldToOrderInManager.md)
