@@ -18,9 +18,14 @@ Tricks for MODX REVO
 	* [Динамическое обновление основной корзины](/2.minishop2/cart/DynamicUpdateCart.md)
 	* [Зависимость цены доставки от суммы заказа или от количества товаров в корзине](/2.minishop2/delivery/CustomDeliveryCost.md)
 	* [Минимальная сумма заказа](/2.minishop2/order/MinimalCostOrder.md)
+	* [Подписка на рассылку при оформлении заказа](/2.minishop2/order/SubscribeOnOrder.md)
+
 
 3. Blog/News
 	* [Лента постов/новостей с помощью pdoTools](/3.Blog/SimplePostsFeed.md)
+
+4. Утилиты
+	* 
 
 
 --------------
@@ -28,6 +33,5 @@ Tricks for MODX REVO
 **В планах**
 
 * Migx примеры
-* Мультиязычность
-* Дата на русском
+* Мультиязычность 
 * Консольные скрипты (обновление галереи, измнение полей форм)
