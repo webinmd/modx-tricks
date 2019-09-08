@@ -2,9 +2,9 @@
 ##1. Вызов
 
 ```[[FormIt?
-    &hooks=\`fields,email\`
+    &hooks=``fields,email``
     &fieldNames=\`name==Имя,phone==Контактный телефон\`
-    &emailTpl=\`email.tpl\`
+    &emailTpl=``email.tpl``
 ]]```
 
 ИЛИ
