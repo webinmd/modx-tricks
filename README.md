@@ -12,6 +12,7 @@ Tricks for MODX REVO
 	* [SMTP для gmail](/1.AjaxForm/SMTP-gmail.md)
 	* [SMTP для beget](/1.AjaxForm/SMTP-beget.md)
 	* [SMTP для yandex](/1.AjaxForm/SMTP-yandex.md)
+	* [Один чанк для FormIt](/1.AjaxForm/One-chunk.md)
 
 2. minishop2
 	* [Добавить свои поля при оформлении заказа](/2.minishop2/order/AddFieldToOrderInManager.md)
