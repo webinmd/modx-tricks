@@ -20,6 +20,7 @@ Tricks for MODX REVO
 	* [Зависимость цены доставки от суммы заказа или от количества товаров в корзине](/2.minishop2/delivery/CustomDeliveryCost.md)
 	* [Минимальная сумма заказа](/2.minishop2/order/MinimalCostOrder.md)
 	* [Подписка на рассылку при оформлении заказа](/2.minishop2/order/SubscribeOnOrder.md)
+	* [История заказов](/2.minishop2/order/OrderHistory.md)
 
 
 3. Blog/News
@@ -35,4 +36,4 @@ Tricks for MODX REVO
 
 * Migx примеры
 * Мультиязычность 
-* Консольные скрипты (обновление галереи, измнение полей форм)
+* Консольные скрипты (обновление галереи, изменение полей форм)
