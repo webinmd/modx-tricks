@@ -27,7 +27,7 @@ Tricks for MODX REVO
 	* [Лента постов/новостей с помощью pdoTools](/3.Blog/SimplePostsFeed.md)
 
 4. Утилиты
-	* 
+	* [Добавить в CKEditor video плагин](/4.Utilites/ckeditor/videoPlugin.md)
 
 
 --------------
