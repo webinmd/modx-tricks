@@ -16,6 +16,7 @@ Tricks for MODX REVO
 
 2. minishop2
 	* [Добавить свои поля при оформлении заказа](/2.minishop2/order/AddFieldToOrderInManager.md)
+	* [Добавить поля адреса в email при оформлении заказа](/2.minishop2/order/AddUserFieldsToOrderEmail.md)
 	* [Динамическое обновление основной корзины](/2.minishop2/cart/DynamicUpdateCart.md)
 	* [Зависимость цены доставки от суммы заказа или от количества товаров в корзине](/2.minishop2/delivery/CustomDeliveryCost.md)
 	* [Минимальная сумма заказа](/2.minishop2/order/MinimalCostOrder.md)
