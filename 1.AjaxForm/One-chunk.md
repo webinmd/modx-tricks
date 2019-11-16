@@ -23,7 +23,7 @@
     <?php
     $fieldNames = explode(',', $hook->formit->config['fieldNames']);
     foreach ($fieldNames as $key => $field){
-	    $fIeld = explode('==', $field);
+	    $fIeld = explode('==', trim($field));
 	    $result[] = array('name' => $fIeld[1],'value' => $hook->getValue($fIeld[0]),);
     }
     $hook->setValue('fields', $modx->toJSON($result));
