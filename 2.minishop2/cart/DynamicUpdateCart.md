@@ -157,5 +157,5 @@ $(miniShop2.Cart.totalCost).text(miniShop2.Utils.formatPrice(status['total_cost'
 $(miniShop2.Cart.totalProducts).html(status['cart']);
 ```
 
-####Осталось только обернуть вызов сниппета [[!msCart]] в блок с классом «ms2_total_products».
+#### Осталось только обернуть вызов сниппета [[!msCart]] в блок с классом «ms2_total_products».
  
