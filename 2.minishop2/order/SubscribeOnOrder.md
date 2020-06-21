@@ -6,7 +6,7 @@
 ##### Создать плагин на событие msOnCreateOrder, например subscribeUserOnOrder
 
 
-```
+``` php
 <?php
 
 switch ($modx->event->name)
