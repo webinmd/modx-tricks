@@ -23,6 +23,7 @@ Tricks for MODX Revolution
 	* [Подписка на рассылку при оформлении заказа](/2.minishop2/order/SubscribeOnOrder.md)
 	* [История заказов](/2.minishop2/order/OrderHistory.md)
 	* [Перемещаем поля](/2.minishop2/MoveFields.md)
+	* [Настройка PayPal](/2.minishop2/order/PayPal.md)
 
 
 3. Blog/News
