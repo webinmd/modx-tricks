@@ -22,6 +22,7 @@
  
 Затем переходим в системные настройки нашего сайта и указываем там необходимые настройки
 
+
 **Для тестовых платежей (песочница)**
 
 *ms2_payment_paypal_api_url*
@@ -29,6 +30,7 @@ https://api-3t.sandbox.paypal.com/nvp
 
 *ms2_payment_paypal_checkout_url*
 https://www.sandbox.paypal.com/webscr?cmd=_express-checkout&token= 
+
 
 
 **Для реальных платежей**
@@ -42,9 +44,10 @@ https://www.paypal.com/webscr?cmd=_express-checkout&token=
 ---------------------------
 
 Далее данные из paypal аккаунта, которые мы получали выше
-API password: *ms2_payment_paypal_pwd*
-Signature: *ms2_payment_paypal_signature*
-API username: *ms2_payment_paypal_user*
+
+- API password: *ms2_payment_paypal_pwd*
+- Signature: *ms2_payment_paypal_signature*
+- API username: *ms2_payment_paypal_user*
 
 ---------------------------
 
