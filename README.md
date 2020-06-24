@@ -1,7 +1,7 @@
 # modx-tricks
-Tricks for MODX REVO
+Tricks for MODX Revolution
 
-#### Набор различных решений при разработке сайтов на MODX Revo
+#### Набор различных решений при разработке сайтов на MODX Revolution
 
 **Соддержание**
 
@@ -22,6 +22,7 @@ Tricks for MODX REVO
 	* [Минимальная сумма заказа](/2.minishop2/order/MinimalCostOrder.md)
 	* [Подписка на рассылку при оформлении заказа](/2.minishop2/order/SubscribeOnOrder.md)
 	* [История заказов](/2.minishop2/order/OrderHistory.md)
+	* [Перемещаем поля](/2.minishop2/MoveFields.md)
 
 
 3. Blog/News
@@ -37,4 +38,4 @@ Tricks for MODX REVO
 
 * Migx примеры
 * Мультиязычность 
-* Консольные скрипты (обновление галереи, изменение полей форм)
+* Консольные скрипты (обновление галереи)
