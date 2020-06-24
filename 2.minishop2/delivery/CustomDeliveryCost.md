@@ -68,6 +68,7 @@ class msDeliveryCourierHandler extends msDeliveryHandler implements msDeliveryIn
     public function getCost(msOrderInterface $order, msDelivery $delivery, $cost = 0.0) {
 
         $freedeliverysumm = 1000; // сумма от которой доставка станет бесплатной
+        //  $freedeliverysumm = $this->modx->getOption('freedelivery'); // получение из системной настройки
         $cart = $order->ms2->cart->status();
         $cart_cost = $cart['total_cost']; 
 
