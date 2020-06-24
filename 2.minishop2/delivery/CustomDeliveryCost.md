@@ -69,7 +69,7 @@ class msDeliveryCourierHandler extends msDeliveryHandler implements msDeliveryIn
 
         $freedeliverysumm = 1000; // сумма от которой доставка станет бесплатной
         $cart = $order->ms2->cart->status();
-        $cart_count = $cart['total_count']; 
+        $cart_cost = $cart['total_cost']; 
 
         if($cart_cost > $freedeliverysumm){
             return $cost;
