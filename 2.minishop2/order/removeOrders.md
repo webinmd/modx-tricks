@@ -1,3 +1,4 @@
+```php
 <?php
 
 $status = 1;
