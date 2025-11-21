@@ -24,6 +24,7 @@ Tricks for MODX Revolution
 	* [История заказов](/2.minishop2/order/OrderHistory.md)
 	* [Перемещаем поля](/2.minishop2/MoveFields.md)
 	* [Настройка PayPal](/2.minishop2/order/PayPal.md)
+	* [Удаление заказов](/2.minishop2/order/removeOrders.md)
 
 
 3. Blog/News
