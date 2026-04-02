@@ -1,4 +1,4 @@
-# Добавить свои поля в заказ компонента minishop2 в панели администратора
+# OLD: Добавить свои поля в заказ компонента minishop2 в панели администратора в PROPERTIES 
 
 **Источник:**
 [modx.pro](https://modx.pro/solutions/10040-add-your-fields-in-the-order-form/)
