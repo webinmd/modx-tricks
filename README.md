@@ -14,6 +14,7 @@ Tricks for MODX Revolution
 	* [SMTP для yandex](/1.AjaxForm/SMTP-yandex.md)
 	* [Один чанк для FormIt](/1.AjaxForm/One-chunk.md)
 
+
 2. minishop2
 	* [Добавить свои поля при оформлении заказа](/2.minishop2/order/AddFieldToOrderInManager2.md)
 	* [OLD: Добавить свои поля при оформлении заказа в properties](/2.minishop2/order/AddFieldToOrderInManager.md)
@@ -26,6 +27,7 @@ Tricks for MODX Revolution
 	* [Перемещаем поля](/2.minishop2/MoveFields.md)
 	* [Настройка PayPal](/2.minishop2/order/PayPal.md)
 	* [Удаление заказов](/2.minishop2/order/removeOrders.md)
+	* [Добавление товаров в заказ](/2.minishop2/order/AddProductsToOrder.md)
 
 
 3. Blog/News
